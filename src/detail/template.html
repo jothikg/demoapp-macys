@@ -1,0 +1,41 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">{model:name}</h3>
+    </div>
+    <div class="panel-body">
+        <form role="form" class="form-horizontal">
+            <div class="form-group">
+                <img rv-src="model:image_path" rv-alt="model:name" height="150" width="150" />
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Size: </label>
+                <div class="col-sm-10 size">
+                  <input type="radio" name="size" value="S" checked id="sizeSmall"><label for="sizeSmall">Small</label>
+                  <input type="radio" name="size" value="M" id="sizeMedium"><label for="sizeMedium">Medium</label>
+                  <input type="radio" name="size" value="L" id="sizeLarge"><label for="sizeLarge">Large</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Color: </label>
+              <div class="col-sm-10 color">
+                <input type="radio" name="color" value="Red" checked id="colorRed"><label for="colorRed">Red</label>
+                <input type="radio" name="color" value="Green" id="colorGreen"><label for="colorGreen">Green</label>
+                <input type="radio" name="color" value="Blue" id="colorBlue"><label for="colorBlue">Blue</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Quantity: </label>
+                <div class="col-sm-10">
+                  <input type="number" min="1" max="5" step="1" rv-value="model:quantity">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="button-bar">
+    <button id="save-contact" class="btn btn-success">continue shopping</button>
+</div>
